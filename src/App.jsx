@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
-
+import Header from './components/header/Header'
+import Home from './components/pages/Home'
 function App() {
   return (
-    <>
-    <h1 className='bg-red-200 hover:bg-amber-200'>hello world</h1>
-    </>
+    <div>
+      <Home/>
+    </div>
   )
 }
 
 export default App
+
