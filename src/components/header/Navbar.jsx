@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React from "react";
 import NotFound from "../NotFound";
+import Shop from "../shop/shop";
 
 const Navbar = () => {
   return (
@@ -22,7 +23,7 @@ const Navbar = () => {
       </div>
     </nav>
     <Routes>
-      <Route path="/shop" element={<NotFound />} />
+      <Route path="/shop" element={<Shop />} />
       <Route path="/order" element={<NotFound />} />
       <Route path="/manage" element={<NotFound />} />
     </Routes>
