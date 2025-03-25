@@ -1,8 +1,8 @@
 import React from 'react';
-import MyButton from '../ui/MyButton';
+import { Button } from '@headlessui/react';
 import { FaShoppingCart } from "react-icons/fa";
 
-function ProductCard({ product }) {
+function ProductCard({ product, handleAddProduct }) {
     const { name, img, seller, price, stock } = product;
 
     return (
@@ -15,8 +15,10 @@ function ProductCard({ product }) {
                 <p className='text-gray-700'>By: {seller}</p>
                 <p className='text-lg font-bold'>${price}</p>
                 <p className='text-red-600'>Only {stock} left in stock. Order soon.</p>
-                {/* Pass the icon as a component */}
-                <MyButton title="Add to cart" icon={FaShoppingCart} />
+                <Button onClick={()=>handleAddProduct(product)} className="inline-flex items-center gap-2 rounded-md bg-orange-500 py-1.5 px-3 text-sm font-semibold text-white shadow-inner shadow-white/10 focus:outline-none hover:bg-gray-600 focus:ring-2 focus:ring-white cursor-pointer">
+                    <FaShoppingCart />
+                    <span>Add to cart</span>
+                </Button>
             </div>
         </div>
     );
